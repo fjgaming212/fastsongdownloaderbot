@@ -37,7 +37,7 @@ Jebot = Client(
 async def song(client, message):
     cap = "@fastsongdownloderslbzbot"
     url = message.text
-    rkp = await message.reply("<b>🔍 Searching your song ...</b>")
+    rkp = await message.reply("<b>🔍 Mencari lagu Anda ...</b>")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -45,7 +45,7 @@ async def song(client, message):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await rkp.edit("<b>Failed to find your song 😥.... Try anyother one !</b>")
+        return await rkp.edit("<b>Gagal menemukan lagu Anda 😥.... Coba yang lain !</b>")
     type = "audio"
     if type == "audio":
         opts = {
@@ -121,7 +121,7 @@ async def song(client, message):
 async def song(client, message):
     cap = "@fastsongdownloderslbzbot"
     url = message.text.split(None, 1)[1]
-    rkp = await message.reply("<b>🔍 Searching your song ...</b>")
+    rkp = await message.reply("<b>🔍 Mencari lagu Anda ...</b>")
     if not url:
         await rkp.edit("**<b>What's the song you want?, Please use this format **\nformat /song <song name> </b>")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -131,7 +131,7 @@ async def song(client, message):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await rkp.edit("<b>Failed to find your song 😥.... Try anyother one !</b>")
+        return await rkp.edit("<b>Gagal menemukan lagu Anda 😥.... Coba yang lain !</b>")
     type = "audio"
     if type == "audio":
         opts = {
@@ -189,7 +189,7 @@ async def song(client, message):
         return
     time.time()
     if song:
-        await rkp.edit("<b>Uploading ⏳ Your Song, Please Wait </b>") 
+        await rkp.edit("<b>Mengunggah ⏳ Lagu Anda, Harap tunggu </b>") 
         lol = "./thumb.jpg"
         lel = await message.reply_audio(
                  f"{rip_data['id']}.mp3",
@@ -207,7 +207,7 @@ JOIN_ASAP = "<b>You Need To Join My updates channel  For Executing This Command 
 
 FSUBB = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="🔔 Join My Channel", url=f"https://t.me/sl_bot_zone")
+        InlineKeyboardButton(text="🔔 Join My Channel", url=f"https://t.me/Rizzz_Support")
         ]]
     )
 @Jebot.on_message(command(["start", f"start"]) & other_filters)
@@ -223,14 +223,14 @@ async def start(_, message: Message):
         return
        await Jebot.send_message
                chat_id=message.chat.id,
-               text="""<b>👋 Hey There, I'm a Song Downloader Bot. A bot by 👨‍💻 @slbotzone.
+               text="""<b>👋 Hai, Saya Bot Pengunduh Lagu. Sebuah bot oleh 👨‍💻 @FJ_GAMING.
 
                                                            """,   
                             reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Add Me To Your Group ➕", url=f"https://t.me/fastsongdownloderslbzbot?startgroup=true"
+                        "➕ Add Me To Your Group ➕", url=f"https://t.me/Boot_Downloadermusicbot?startgroup=true"
                     )
                 ],
                 [
@@ -245,10 +245,10 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔔  My Update Channel", url=f"https://t.me/sl_bot_zone"
+                        "🔔  My Update Channel", url=f"https://t.me/Rizzz_Support"
                     ),
                     InlineKeyboardButton(
-                        "💬 Support Group ", url="https://t.me/slbotzone"
+                        "💬 Support Group ", url="https://t.me/KingUserbotSupport"
                     )
                 ]
             ]
@@ -280,7 +280,7 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Send a song name to download song
+               text="""<b>Kirim nama lagu untuk mengunduh lagu
 
 @slbotzone</b>""",
             reply_to_message_id=message.message_id
@@ -304,7 +304,7 @@ print(
     """
 Bot Started!
 
-Join @slbotzone
+Join @Rizzz_Support
 """
 )
 

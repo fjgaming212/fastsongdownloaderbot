@@ -245,10 +245,10 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔔  My Update Channel", url=f"https://t.me/Rizzz_Support"
+                        "💬  My Update Channel", url=f"https://t.me/Rizzz_Support"
                     ),
                     InlineKeyboardButton(
-                        "💬 Support Group ", url="https://t.me/KingUserbotSupport"
+                        "📲 Developer ", url="https://t.me/FJ_GAMING"
                     )
                 ]
             ]
